@@ -1,7 +1,7 @@
 /*  Maverick Model 3D
- * 
+ *
  *  Copyright (c) 2004-2007 Kevin Worcester
- * 
+ *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -14,7 +14,7 @@
  *
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, write to the Free Software
- *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, 
+ *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307,
  *  USA.
  *
  *  See the COPYING file for full license text.
@@ -244,9 +244,9 @@ bool KeyConfig::loadFile( const char * filename )
       {
          chomp( line );
 
-         if ( isspace(line[0]) 
-               || line[0] == ';' 
-               || line[0] == '#' 
+         if ( isspace(line[0])
+               || line[0] == ';'
+               || line[0] == '#'
                || strncmp(line, "//", 2 ) == 0 )
          {
             // comment, ignore it
@@ -345,16 +345,16 @@ void keycfg_set_defaults()
    // Tools
    g_keyConfig.setDefaultKey( "tool_snap_to_grid", 0 );
    g_keyConfig.setDefaultKey( "tool_snap_to_vertex", 0 );
-   g_keyConfig.setDefaultKey( "tool_select_vertices", QKeySequence( a->translate( "KeyConfig", "V", "Select Vertices Tool Shortcut" )) );
-   g_keyConfig.setDefaultKey( "tool_select_faces", QKeySequence( a->translate( "KeyConfig", "F", "Select Faces Tool Shortcut")) );
-   g_keyConfig.setDefaultKey( "tool_select_connected_mesh", QKeySequence( a->translate( "KeyConfig", "C", "Select Connected Mesh Tool Shortcut")) );
-   g_keyConfig.setDefaultKey( "tool_select_groups", QKeySequence( a->translate( "KeyConfig", "G", "Select Groups Tool Shortcut")) );
-   g_keyConfig.setDefaultKey( "tool_select_bone_joints", QKeySequence( a->translate( "KeyConfig", "B", "Select Bone Joints Tool Shortcut")) );
-   g_keyConfig.setDefaultKey( "tool_select_points", QKeySequence( a->translate( "KeyConfig", "T", "Select Points Tool Shortcut")) );
+   g_keyConfig.setDefaultKey( "tool_select_vertices", QKeySequence( a->translate( "KeyConfig", "Shift+V", "Select Vertices Tool Shortcut" )) );
+   g_keyConfig.setDefaultKey( "tool_select_faces", QKeySequence( a->translate( "KeyConfig", "Shift+F", "Select Faces Tool Shortcut")) );
+   g_keyConfig.setDefaultKey( "tool_select_connected_mesh", QKeySequence( a->translate( "KeyConfig", "Shift+C", "Select Connected Mesh Tool Shortcut")) );
+   g_keyConfig.setDefaultKey( "tool_select_groups", QKeySequence( a->translate( "KeyConfig", "Shift+G", "Select Groups Tool Shortcut")) );
+   g_keyConfig.setDefaultKey( "tool_select_bone_joints", QKeySequence( a->translate( "KeyConfig", "Shift+B", "Select Bone Joints Tool Shortcut")) );
+   g_keyConfig.setDefaultKey( "tool_select_points", QKeySequence( a->translate( "KeyConfig", "Shift+P", "Select Points Tool Shortcut")) );
    g_keyConfig.setDefaultKey( "tool_select_projections", 0 );
-   g_keyConfig.setDefaultKey( "tool_move", QKeySequence( a->translate( "KeyConfig", "M", "Move Tool Shortcut")) );
+   g_keyConfig.setDefaultKey( "tool_move", QKeySequence( a->translate( "KeyConfig", "G", "Move Tool Shortcut")) );
    g_keyConfig.setDefaultKey( "tool_rotate", QKeySequence( a->translate( "KeyConfig", "R", "Rotate Tool Shortcut")) );
-   g_keyConfig.setDefaultKey( "tool_scale", 0 );
+   g_keyConfig.setDefaultKey( "tool_scale", QKeySequence( a->translate( "KeyConfig", "S", "Scale Tool Shortcut")));
    g_keyConfig.setDefaultKey( "tool_shear", 0 );
    g_keyConfig.setDefaultKey( "tool_extrude", 0 );
    g_keyConfig.setDefaultKey( "tool_drag_vertex_on_edge", 0 );
@@ -392,7 +392,7 @@ void keycfg_set_defaults()
    g_keyConfig.setDefaultKey( "cmd_flatten_flatten_y", 0 );
    g_keyConfig.setDefaultKey( "cmd_flatten_flatten_z", 0 );
    g_keyConfig.setDefaultKey( "cmd_flatten", 0 );
-   g_keyConfig.setDefaultKey( "cmd_extrude", QKeySequence( a->translate( "KeyConfig", "Insert", "Extrude Command Shortcut")) );
+   g_keyConfig.setDefaultKey( "cmd_extrude", QKeySequence( a->translate( "KeyConfig", "E", "Extrude Command Shortcut")) );
    g_keyConfig.setDefaultKey( "cmd_invert_normals", 0 );
    g_keyConfig.setDefaultKey( "cmd_weld_vertices", QKeySequence( a->translate( "KeyConfig", "Ctrl+W", "Weld Command Shortcut")) );
    g_keyConfig.setDefaultKey( "cmd_unweld_vertices", 0 );
@@ -404,7 +404,7 @@ void keycfg_set_defaults()
    g_keyConfig.setDefaultKey( "cmd_edge_turn", 0 );
    g_keyConfig.setDefaultKey( "cmd_edge_divide", 0 );
    g_keyConfig.setDefaultKey( "cmd_subdivide_faces", 0 );
-   g_keyConfig.setDefaultKey( "cmd_make_face_from_vertices", 0 );
+   g_keyConfig.setDefaultKey( "cmd_make_face_from_vertices",QKeySequence( a->translate( "KeyConfig", "F", "Make face Command Shortcut"))  );
    g_keyConfig.setDefaultKey( "cmd_cap_holes", 0 );
    g_keyConfig.setDefaultKey( "cmd_rotate_texture_coordinates_face", 0 );
    g_keyConfig.setDefaultKey( "cmd_rotate_texture_coordinates_group", 0 );
